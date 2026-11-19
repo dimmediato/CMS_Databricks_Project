@@ -105,5 +105,5 @@ Each check is an `assert`, so a failure stops the run.
 
 **Sources:**
 - Data: [CMS Medicare Part D Prescribers by Provider and Drug](https://data.cms.gov/provider-summary-by-type-of-service/medicare-part-d-prescribers/medicare-part-d-prescribers-by-provider-and-drug)
-- Data dictionary: [link]
-- Methodology (suppression flags and state codes): [link]
+- Data dictionary: (RY22 edition; same 22-column layout as 2024): [CMS data dictionary](https://data.cms.gov/sites/default/files/2022-07/MUP_DPR_RY22_20220715_DD_PRV_Drug.pdf)
+- Methodology (suppression flags and state codes): [CMS Part D Prescriber methodology](https://www.cms.gov/files/document/part-d-prescriber-puf-methodology.pdf)
