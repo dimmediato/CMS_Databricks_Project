@@ -8,6 +8,14 @@ The gold fact table holds **28,023,892 rows** (one per prescriber, drug, and yea
 
 ---
 
+## Setup
+
+1. Download the full 2024 CSV of *Medicare Part D Prescribers by Provider and Drug* from data.cms.gov (link under Sources).
+2. Rename it `Medicare_Part_D_Prescribers_2024.csv`. The loader reads `data_year` from the filename.
+3. Run `01_setup`, upload the file to the `cms.bronze.raw_files` volume, then rerun its last cell to confirm.
+
+---
+
 ## Pipeline
 
 | Notebook | Layer | What it does |
