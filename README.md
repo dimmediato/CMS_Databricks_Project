@@ -27,7 +27,7 @@ The gold fact table holds **28,023,892 rows** (one per prescriber, drug, and yea
 | `05_reference` | Silver | Builds state and specialty lookup tables, each with its own checks. |
 | `06_gold` | Gold | Builds the star schema and reconciles it back to silver. |
 
-Run the notebooks in order (`03_profile_bronze` is exploratory and can be skipped). The pipeline currently loads one data year, 2024. `data_year` is taken from the filename and carried through to the gold grain, so the schema is ready for multiple years, but the loader would need to read all files in the volume instead of a single named file.
+Run the notebooks in order (`03_profile_bronze` is exploratory and can be skipped). The pipeline currently loads one data year, 2024. data_year is taken from the filename and carried through to the gold grain. Supporting more years needs two changes: the loader must read every file in the volume and append rather than overwrite, and dim_prescriber must pick one name and city per NPI (for example, from the latest year), since prescribers move. If the second change were skipped, the gold uniqueness check would fail rather than double-count.
 
 ---
 
